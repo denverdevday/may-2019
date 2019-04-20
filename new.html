@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Denver Dev Day | May 31, 2019</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./ddd.css">
+    <link rel="stylesheet" href="./sessionize.css">
+    <link rel="stylesheet" href="./eventbrite-hack.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png">
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+  <div class="row align-items-start" style="margin-top: 35px; height: 106px;">
+    <div id="leftpad" class="col" style="background: url('./assets/header-pad.png') repeat-x left; height: 106px;">
+    </div>
+    <div class="col-10 container text-center" style="max-width: 1200px; padding: 0">
+       <div id="logo" style="height: 106px; background: url('./assets/header.png') repeat-x right;" ></div>
+    </div>
+    <div id="rightpad" class="col d-none d-sm-block" style="background: url('./assets/header-pad.png') repeat-x -127px 0; height: 106px;">
+    </div>
+  </div>
+
+  <div class="row align-items-start">
+    <div class="col container text-center">
+    <h1>Denver&nbsp;Dev&nbsp;Day</h1>
+    <h3>May&nbsp;31,&nbsp;2019</h3>
+    <address>
+        <strong>Microsoft, Denver Tech Center</strong><br/>
+        7595 Technology Way, Suite 400<br/>
+        Denver, CO&nbsp;80237
+    </address>
+    </div>
+</div>
+
+<script>
+var d = 1201 - 1085;
+function adjustLeftPad() {
+    var logo = document.getElementById('logo');
+    var leftpad = document.getElementById('leftpad');
+    if (logo.offsetWidth < 1085) {
+        leftpad.style.backgroundPositionX = (logo.offsetWidth + leftpad.offsetWidth - d) + "px";
+    }
+}
+
+window.addEventListener('resize', function (e) {
+  adjustLeftPad();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  adjustLeftPad();
+}, false);
+</script>
+
+</body>
+</html>
