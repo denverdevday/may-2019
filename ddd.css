@@ -58,3 +58,8 @@ div.co-ddd {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
+
+.co-ddd a {
+    color: white;
+    text-decoration: none;
+}
