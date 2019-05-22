@@ -493,7 +493,9 @@
     transition: all .15s ease-in
 }
 
-#sessionize .sz-speaker__links .sz-speaker__link:hover, #sessionize .sz-speaker__links .sz-speaker__link:focus, #sessionize .sz-speaker__links .sz-speaker__link:active {
+#sessionize .sz-speaker__links .sz-speaker__link:hover,
+#sessionize .sz-speaker__links .sz-speaker__link:focus,
+#sessionize .sz-speaker__links .sz-speaker__link:active {
     opacity: 1;
     color: #EEE;
     background-color: #004E85;
