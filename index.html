@@ -42,11 +42,9 @@
 
 <div id="menu" class="container-fluid mt-3 mb-3">
     <div class="row justify-content-md-center">
-        <!--
         <div class="col-md-auto">
             <a href="#schedule">Schedule</a>
         </div>
-        -->
         <div class="col-md-auto">
             <a href="./sessions.html#sessions">Sessions</a>
         </div>
@@ -80,6 +78,36 @@
 </div>
 
 <!-- Schedule widget -->
+
+<div id="schedule" class="container-fluid mt-5 mb-5">
+    <a name="schedule"></a>
+    <script type="text/javascript" src="https://sessionize.com/api/v2/8w8wkjyb/view/gridtable"></script>
+
+    <script type="text/javascript">
+        var mb12 = document.querySelectorAll('[data-room-name="Maroon Bells 1&2"]');
+        for (var i = 0; i < mb12.length; ++i) {
+            var empty = mb12[i].parentNode.querySelectorAll('[class="sz-session-empty"]');
+            var mb12Room = mb12[i].querySelectorAll('[class="sz-session__room"]');
+            mb12[i].colSpan = 5;
+            mb12[i].style.textAlign = 'center';
+            mb12[i].style.borderTop = 'none';
+            mb12[i].style.borderRight = 'none';
+            mb12[i].style.borderLeft = 'none';
+            mb12[i].style.borderBottom = '1px solid #E6E6E6';
+            for (var j = 0; j < empty.length; ++j) {
+                mb12[i].parentNode.removeChild(empty[j]);
+            }
+            for (var j = 0; j < mb12Room.length; ++j) {
+                mb12Room[j].parentNode.removeChild(mb12Room[j]);
+            }
+        }
+
+        var hl = document.querySelectorAll('tr.sz-row-highlight');
+        for (var j = 0; j < hl.length; ++j) {
+            hl[j].className = hl[j].className.replace('sz-row-highlight', '');
+        }
+    </script>
+</div>
 
 <div id="app" class="container-fluid mt-5 mb-5">
     <a name="app"></a>
